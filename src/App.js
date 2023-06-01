@@ -15,7 +15,7 @@ function App() {
         <NavTab />
 
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/Portfolio" element={<Home />} />
           <Route path="home" element={<Home />} />
           <Route path="experience" element={<Experience />} />
           {/* <Route path="experience" > </Route> */}

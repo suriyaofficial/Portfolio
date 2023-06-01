@@ -23,7 +23,7 @@ function NavTab() {
                                 value={value}
                                 onChange={(e, value) => setValue(value)}
                                 indicatorColor="#3A9188">
-                                <Tab component={Link} to={"home"} label="Home" ><HashLink smooth to="#header" /></Tab>
+                                <Tab component={Link} to={"/Portfolio"} label="Home" ><HashLink smooth to="#header" /></Tab>
                                 <Tab component={Link} to={"Experience"} label="Experience"> <HashLink smooth to="#experience" /> </Tab>
                                 <Tab component={Link} to={"Project"} label="Project"> <HashLink smooth to="#project" /></Tab>
                                 <Tab component={Link} to={"Contact_us"} label="Contact us"> <HashLink smooth to="#contactus" /></Tab>

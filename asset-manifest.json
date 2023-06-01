@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.800cfd77.css",
-    "main.js": "/Portfolio/static/js/main.b6470a3a.js",
+    "main.js": "/Portfolio/static/js/main.cf45afa0.js",
     "static/media/Get in touch-bro.png": "/Portfolio/static/media/Get in touch-bro.570723859a7a770f6f37.png",
     "static/media/Hacker-pana (1).png": "/Portfolio/static/media/Hacker-pana (1).679c21bc0f0284677723.png",
     "index.html": "/Portfolio/index.html",
     "main.800cfd77.css.map": "/Portfolio/static/css/main.800cfd77.css.map",
-    "main.b6470a3a.js.map": "/Portfolio/static/js/main.b6470a3a.js.map"
+    "main.cf45afa0.js.map": "/Portfolio/static/js/main.cf45afa0.js.map"
   },
   "entrypoints": [
     "static/css/main.800cfd77.css",
-    "static/js/main.b6470a3a.js"
+    "static/js/main.cf45afa0.js"
   ]
 }

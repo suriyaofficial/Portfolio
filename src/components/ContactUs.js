@@ -7,6 +7,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import logo from '../asset/Get in touch-bro.png'
+import { Grid } from "@mui/material";
 
 function ContactUs() {
     const [name, setName] = useState("");
@@ -77,21 +78,51 @@ function ContactUs() {
             </Snackbar>
 
             <div id="get_in_touch">
-                <Container>
-                    <Row>
-                        <Col lg={3} id="form" className="text-center">
-                            <Col className="form-item" ><h1>GET IN TOUCH </h1></Col>
-                            <Col className="form-item " ><input className="field" placeholder="NAME" value={name} onChange={(e) => setName(e.target.value)} /></Col>
-                            <Col className="form-item " ><input className="field" placeholder="EMAIL" value={email} onChange={(e) => setEmail(e.target.value)} /></Col>
-                            <Col className="form-item " ><input className="field" placeholder="PHONE NO" value={phoneNo} onChange={(e) => setPhoneNo(e.target.value)} /></Col>
-                            <Col className="form-item" ><input className="field" type="text" style={{ height: "100px" }} placeholder="ASK ME YOUR QUIERES" value={quieres} onChange={(e) => setQuieres(e.target.value)} /></Col>
-                            <Col className="form-item" > <button className="butn" onClick={handleReset} >Reset</button> </Col>
-                            <Col className="form-item" ><button className="butn" onClick={handleSend} > Send</button></Col>
-                        </Col>
-                        <Col ><img className="img" src={logo}></img></Col>
-                    </Row>
+                <Grid container
+                    direction="row"
+                    justifyContent="center"
+                    alignItems="center">
+                    <Grid item md={3} container
+                        direction="column"
+                        justifyContent="center"
+                        alignItems="center">
 
-                </Container>
+                        <div id="form">
+
+                            <Grid >
+                                <h1>GET IN TOUCH </h1>
+                            </Grid>
+                            <Grid className="form-item">
+
+                                <input className="field" placeholder="NAME" value={name} onChange={(e) => setName(e.target.value)} />
+                            </Grid>
+                            <Grid className="form-item">
+
+                                <input className="field" placeholder="EMAIL" value={email} onChange={(e) => setEmail(e.target.value)} />
+                            </Grid>
+                            <Grid className="form-item">
+
+                                <input className="field" placeholder="PHONE NO" value={phoneNo} onChange={(e) => setPhoneNo(e.target.value)} />
+                            </Grid>
+                            <Grid className="form-item">
+
+                                <input className="field" type="text" style={{ height: "100px" }} placeholder="ASK ME YOUR QUIERES" value={quieres} onChange={(e) => setQuieres(e.target.value)} />
+                            </Grid>
+                            <Grid className="form-item">
+
+                                <button className="butn" onClick={handleReset} >Reset</button>
+                            </Grid>
+                            <Grid className="form-item">
+
+                                <button className="butn" onClick={handleSend} > Send</button>
+                            </Grid>
+                        </div>
+                    </Grid>
+                    <Grid item md={8} sx={{ display: { xs: 'none', md: 'flex' } }}>
+                        <img className="img" src={logo}></img>
+                    </Grid>
+                </Grid>
+
 
 
 

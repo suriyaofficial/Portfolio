@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { Drawer, List, ListItemButton, ListItemText, ListItemIcon, IconButton } from '@mui/material'
 import TextSnippetIcon from '@mui/icons-material/TextSnippet';
 import InfoIcon from '@mui/icons-material/Info';
@@ -14,24 +13,20 @@ const DrawerComp = () => {
     return (
         <>
             <Drawer open={openDrawer}
+                sx={{ background: "#062925" }}
                 onClose={() => setOpenDrawer(false)}
             >
                 <List>
-                    <Link to="home" className='NavLink'>
-                        <ListItemButton onClick={() => setOpenDrawer(false)}>
-                            <ListItemIcon>
-                                <TextSnippetIcon />
-                                <ListItemText  >TEMPLETE</ListItemText>
-                            </ListItemIcon>
-                        </ListItemButton>
-                    </Link>
-                    <Link to="about" className='NavLink'>
-                        <ListItemButton onClick={() => setOpenDrawer(false)}>
-                            <ListItemIcon ><InfoIcon />
-                                <ListItemText  >ABOUT US</ListItemText>
-                            </ListItemIcon>
-                        </ListItemButton>
-                    </Link>
+                    <ListItemButton onClick={() => setOpenDrawer(false)}>
+                        <ListItemIcon>
+                            <ListItemText href="#about" >TEMPLETE</ListItemText>
+                        </ListItemIcon>
+                    </ListItemButton>
+                    <ListItemButton onClick={() => setOpenDrawer(false)}>
+                        <ListItemIcon >
+                            <ListItemText  >ABOUT US</ListItemText>
+                        </ListItemIcon>
+                    </ListItemButton>
 
                 </List>
             </Drawer>

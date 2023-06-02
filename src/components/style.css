@@ -26,27 +26,28 @@
 
 #basic-navbar-nav {}
 
+
 #home,
 #experience,
-#contactus,
+#contact,
 #project,
 #about {
+    padding-top: 5%;
     height: 100vh;
     border: 1px solid black;
 }
 
-#get_in_touch {
+#home #get_in_touch {
     height: 100vh;
     /* background-color: white; */
 }
 
 #form {
+    text-align: center;
     margin: 20px;
     padding: 20px;
     border: 1px solid black;
     height: 80vh;
-
-
     background: #044A42;
     box-shadow: 23px 23px 4px #3A9188;
     border-radius: 25px;
@@ -143,3 +144,36 @@
     width: 50vw;
     margin-left: auto;
 }
+
+.header-img-xs {
+    width: 100vw;
+    margin-top: 8%;
+}
+
+.header-text-xs {
+    font-size: 15vw;
+    color: #044A42;
+    font-weight: 900;
+    opacity: .8;
+}
+
+.header-sub-text-xs {
+    font-size: 30px;
+    color: #044A42;
+    font-weight: 700;
+    opacity: .5;
+}
+
+.social-logo-xs {
+    width: 90px;
+}
+
+.social-logo-xs :hover {
+    transform: translateY(-20px);
+    transition-duration: 1000ms;
+}
+
+/* #drawer {
+    background-color: #062925;
+    color: #3A9188;
+} */

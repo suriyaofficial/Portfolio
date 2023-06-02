@@ -57,7 +57,7 @@ function ContactUs() {
     };
     // handleSend
     return (
-        <>
+        <div id="contact">
             <Snackbar open={success} autoHideDuration={6000} onClose={handleClose}>
                 <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
                     !Message send to developer!
@@ -88,7 +88,7 @@ function ContactUs() {
                             <Col className="form-item" > <button className="butn" onClick={handleReset} >Reset</button> </Col>
                             <Col className="form-item" ><button className="butn" onClick={handleSend} > Send</button></Col>
                         </Col>
-                        <Col><img className="img" src={logo}></img></Col>
+                        <Col ><img className="img" src={logo}></img></Col>
                     </Row>
 
                 </Container>
@@ -105,7 +105,7 @@ function ContactUs() {
 
 
             </div>
-        </>
+        </div>
 
     )
 }

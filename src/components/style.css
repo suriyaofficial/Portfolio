@@ -1,13 +1,37 @@
-#header,
+.nav-bg-color {
+    background-color: #062925;
+    color: #3A9188;
+
+}
+
+.link-name {
+    color: #3A9188;
+    margin-left: 5%;
+}
+
+.logo-name {
+    color: #3A9188;
+    margin-left: 5%;
+}
+
+.link-name:hover {
+    background: #3A9188;
+    border: 1px solid #3A9188;
+    border-radius: 5%;
+}
+
+.navbar-toggler {
+    background: #3A9188;
+}
+
+#basic-navbar-nav {}
+
+#home,
 #experience,
 #contactus,
-#project {
+#project,
+#about {
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 100px;
     border: 1px solid black;
 }
 
@@ -89,14 +113,15 @@
 /* header style */
 
 .header-text {
-    font-size: larger;
+    margin-top: 10%;
+    font-size: 8vw;
     color: #044A42;
     font-weight: 700;
     opacity: .8;
 }
 
 .header-sub-text {
-    font-size: 50px;
+    font-size: 30px;
     color: #044A42;
     font-weight: 700;
     opacity: .5;
@@ -105,4 +130,16 @@
 .social-logo:hover {
     transform: translateY(-20px);
     transition-duration: 1000ms;
+}
+
+/* #header {
+    background-image: url('../asset/Hacker-pana\ \(1\).png');
+    background-repeat: no-repeat;
+    background-size: 100vh;
+} */
+
+
+.header-img {
+    width: 50vw;
+    margin-left: auto;
 }

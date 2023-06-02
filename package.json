@@ -17,10 +17,13 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
+    "react-messenger-customer-chat": "^0.8.0",
     "react-router-dom": "^6.11.2",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",
+    "react-simple-typewriter": "^5.0.1",
     "styled-components": "^5.3.11",
+    "typewriter-effect": "^2.20.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

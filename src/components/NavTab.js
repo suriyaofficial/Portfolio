@@ -1,39 +1,53 @@
 import React, { useState } from 'react'
 import { AppBar, Toolbar, Tabs, Tab, useMediaQuery, useTheme } from "@mui/material";
-import { Link } from 'react-router-dom'
+import Drawer from './Drawer'
 import Grid from '@mui/material/Grid';
 import { HashLink } from 'react-router-hash-link';
 
+
+
+
 function NavTab() {
     const [value, setValue] = useState();
+    const theme = useTheme();
+    const isMatch = useMediaQuery(theme.breakpoints.down("md"));
+
 
     return (
         <>
             <Grid container spacing={0}>
                 <Grid item xs={12} >
-                    <AppBar position="float" sx={{ background: "#044A42" }}>
+                    <AppBar position="fixed" sx={{ background: "#062925" }}>
                         <Toolbar>
 
-
-                            {/* <img className='img' src={logo} alt='' /> */}
-
-                            <Tabs
-                                sx={{ marginLeft: "auto" }}
-                                textColor="#3A9188"
-                                value={value}
-                                onChange={(e, value) => setValue(value)}
-                                indicatorColor="#3A9188">
-                                <Tab component={Link} to={"/Portfolio"} label="Home" ><HashLink smooth to="#header" /></Tab>
-                                <Tab component={Link} to={"Experience"} label="Experience"> <HashLink smooth to="#experience" /> </Tab>
-                                <Tab component={Link} to={"Project"} label="Project"> <HashLink smooth to="#project" /></Tab>
-                                <Tab component={Link} to={"Contact_us"} label="Contact us"> <HashLink smooth to="#contactus" /></Tab>
-                                <Tab component={Link} to={"about"} label="About" />
-
-                            </Tabs>
+                            {
+                                isMatch ?
+                                    (
+                                        <>
+                                            <Drawer />
+                                        </>
+                                    ) : (<>
+                                        <Tabs
+                                            sx={{ marginLeft: "auto" }}
+                                            textColor="#3A9188"
+                                            value={value}
+                                            onChange={(e, value) => setValue(value)}
+                                            indicatorColor="">
 
 
+                                            <Tab label="HOME" href='#home' />
+                                            <Tab label="EXPERIENCE" href='#experience' />
+                                            <Tab label="PROJECT" href='#project' />
+                                            <Tab label="CONTACT_US" href='#contact' />
+                                            <Tab label="ABOUT_ME" href='#about' />
+                                            <Tab />
 
 
+                                        </Tabs>
+                                    </>
+
+                                    )
+                            }
 
                         </Toolbar>
 
@@ -43,8 +57,8 @@ function NavTab() {
             </Grid>
 
 
-        </>
-    );
+
+        </>)
 }
 
 export default NavTab;

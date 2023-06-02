@@ -2,7 +2,7 @@ import React from 'react'
 
 function AboutUs() {
     return (
-        <div><h1>aboutme</h1></div>
+        <div id='about'><h1>aboutme</h1></div>
     )
 }
 

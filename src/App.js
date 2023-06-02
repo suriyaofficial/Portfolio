@@ -1,28 +1,34 @@
-import './App.css';
-import NavTab from './components/NavTab';
-import { BrowserRouter as Router } from "react-router-dom";
-import { Routes, Route } from "react-router-dom";
-import Home from "./components/Home"
-import AboutUs from './components/AboutUs';
+
+import React from "react";
+import "./App.css";
+import NavTab from "./components/NavTab";
+import Experience from './components/Experience';
 import Project from './components/Project';
 import ContactUs from './components/ContactUs';
-import { HashLink } from 'react-router-hash-link';
-import Experience from './components/Experience';
+import Header from './components/Header'
+import Aboutus from "./components/AboutUs";
+
+import ReactDOM from 'react-dom';
+import MessengerCustomerChat from 'react-messenger-customer-chat';
+
 function App() {
   return (
-    <div className='App'>
-      <Router>
+    <>
+      <MessengerCustomerChat
+        pageId="788312234566911"
+        appId="1428441074582807"
+
+      />
+
+      <div className='App'>
         <NavTab />
-
-        <Routes>
-          <Route path="/Portfolio" element={<Home />} />
-          <Route path="experience" element={<Experience />} />
-          <Route path="project" element={<Project />} />
-          <Route path="Contact_us" element={<ContactUs />} />
-          <Route path="about" element={<AboutUs />} />
-
-        </Routes>
-      </Router></div>
+        <Header />
+        <Experience />
+        <Project />
+        <ContactUs />
+        <Aboutus />
+      </div>
+    </>
   );
 }
 
